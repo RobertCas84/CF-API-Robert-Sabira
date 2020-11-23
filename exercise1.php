@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="container">
+    <?php
+require_once 'restful.php';
+$url = 'http://api.serri.codefactory.live/random/';
+$response = curl_get($url);
+$result=json_decode($response);
+
+echo "<h1>".$result->joke."</h1>";
+
+
+
+?>
+    </div>
     
 <div class='container'>
     <div class='row'>
